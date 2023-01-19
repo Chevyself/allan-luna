@@ -3,7 +3,7 @@
     @import '../styles/main.scss';
 
     html, body {
-        background-color: $gray-800;
+        background-color: $black;
     }
 </style>
 

@@ -3,7 +3,6 @@
 </svelte:head>
 
 <script lang="ts">
-    import Divider from '../components/Divider.svelte';
     import Work from '../components/Work.svelte';
 
     let works = [{
@@ -28,17 +27,42 @@
     #landing {
         padding: 15rem 0;
         height: 100vh;
+        background-image: url('/images/allan.png');
+        background-repeat: no-repeat;
+        // Position it to the left bottom
+        background-position: left bottom;
+        background-size: 160vh;
+        background-attachment: fixed;
+        @media screen and (max-width: 767px) {
+            // Hide background image
+            background-image: none;
+        }
     }
+
+    #introduction {
+        animation: fadeInUp 1.7s;
+    }
+
+    
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 40px, 0);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
 </style>
 
 <div class="view-parent">
-    <section id="landing">
-        <div class="container-fluid h-100 p-5">
+    <section id="landing" class="view">
+        <div id="introduction" class="container-fluid h-100 p-5">
             <div class="row h-100">
-                <div class="col-12 col
-                    -md-6 d-flex flex-column justify-content-center">
-                    <h1 class="display-1">Allan Luna</h1>
-                    <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, cumque facere. Non, incidunt velit. Amet labore harum, recusandae saepe beatae nobis.</p>
+                <div class="col-12 col-md-6 offset-md-6 d-flex flex-column justify-content-center">
+                    <h1 class="display-1">Retratos</h1>
+                    <h4>Allan Luna</h4>
                 </div>
             </div>
         </div>
