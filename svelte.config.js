@@ -1,12 +1,28 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-static';
 import preprocess from 'svelte-preprocess';
+
+const dev = process.argv.includes('dev');
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	preprocess: preprocess(),
 
 	kit: {
-		adapter: adapter()
+		// This is needed when the app is deployed in github pages
+		// because the app is not served from the root of the domain
+		// but from a subdirectory
+		// https://kit.svelte.dev/docs#configuration-base
+		paths: {
+			base: dev ? '' : '/allan-luna'
+		},
+
+		adapter: adapter({
+			pages: 'build',
+			assets: 'build',
+			fallback: null,
+			preprocess: false,
+			strict: true
+		})
 	}
 };
 
