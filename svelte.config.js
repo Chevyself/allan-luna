@@ -12,9 +12,10 @@ const config = {
 		// because the app is not served from the root of the domain
 		// but from a subdirectory
 		// https://kit.svelte.dev/docs#configuration-base
-		paths: {
-			base: dev ? '' : '/allan-luna'
-		},
+		// But it is only needed if not using the Build and Deploy workflow
+		// paths: {
+		//	base: dev ? '' : '/allan-luna'
+		// },
 
 		adapter: adapter({
 			pages: 'build',
