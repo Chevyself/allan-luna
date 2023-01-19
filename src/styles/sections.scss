@@ -1,0 +1,19 @@
+.full-view {
+    height: 100vh;
+    @media screen and (orientation:portrait) { 
+        height: 56.25vw;
+    }
+    @media screen and (orientation:landscape) { 
+        height: 100vh;
+    }
+}
+
+.view-parent {
+    scroll-snap-type: y proximity;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+.view {
+    scroll-snap-align: start;
+}
