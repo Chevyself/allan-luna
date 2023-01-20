@@ -1,7 +1,9 @@
 <script lang="ts">
+    import { base } from "$app/paths"
+
     let name: string = 'Lorem Ipsum';
     let description: string = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
-    let image: string = 'images/ph.jpg';
+    let image: string = `${base}/images/ph.jpg`;
     let classes: string = '';
     let full: boolean = false;
     let shadow: boolean = false;

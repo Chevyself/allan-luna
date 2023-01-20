@@ -1,35 +1,36 @@
 <script lang="ts">
+    import { base } from "$app/paths"
     import Work from "../components/Work.svelte";
-
+    
     let works = [
         {
             name: "1",
-            image: "images/1-1.jpg",
+            image: `${base}/images/1.jpg`,
         },
         {
             name: "2",
-            image: "images/2-2.jpg",
+            image: `${base}/images/2-2.jpg`,
             full: true,
             classes: "full-view",
             shadow: true,
         },
         {
             name: "3",
-            image: "images/3-1.jpg",
+            image: `${base}/images/3-1.jpg`,
             left: false
         },
         {
             name: "4",
-            image: "images/4.jpg",
+            image: `${base}/images/4.jpg`,
         },
         {
             name: "5",
-            image: "images/5.jpg",
+            image: `${base}/images/5.jpg`,
             left: false
         },
         {
             name: "6",
-            image: "images/6.jpg",
+            image: `${base}/images/6.jpg`,
         }
     ];
 </script>
@@ -39,7 +40,7 @@
 </svelte:head>
 
 <div class="view-parent">
-    <section id="landing" class="view">
+    <section id="landing" class="view" style="background-image: url({base}/images/allan.png);">
         <div id="introduction" class="container-fluid h-100 p-5">
             <div class="row h-100">
                 <div
@@ -72,7 +73,6 @@
     #landing {
         padding: 15rem 0;
         height: 100vh;
-        background-image: url("/images/allan.png");
         background-repeat: no-repeat;
         // Position it to the left bottom
         background-position: left bottom;
