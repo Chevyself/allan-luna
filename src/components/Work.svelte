@@ -40,7 +40,7 @@
         <div class="d-flex flex-column justify-content-end h-100 p-5">
             <div class="container">
                 <p class="h1">{name}</p>
-                <p class="lead">{description}</p>
+                <p class="h2">{description}</p>
             </div>
         </div>
     {:else}
@@ -90,6 +90,10 @@
             grid-template-columns: 1fr;
             // Also center elements
             justify-items: center;
+        }
+
+        p {
+            font-size: 2rem;
         }
     }
 
