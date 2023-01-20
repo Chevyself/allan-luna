@@ -1,7 +1,8 @@
 .full-view {
     height: 100vh;
     @media screen and (orientation:portrait) { 
-        height: 56.25vw;
+        min-height: 56.25vw;
+        height: auto;
     }
     @media screen and (orientation:landscape) { 
         height: 100vh;
